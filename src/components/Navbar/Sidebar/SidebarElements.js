@@ -33,6 +33,11 @@ export const SidebarContainer = styled.aside`
 
 export const CloseIcon = styled(FaTimes)`
     color: #f5f5f5;
+
+    &:hover {
+        color: #256ce1;
+        transition: 0.2s ease-in-out;
+    }
 `;
 
 export const Icon = styled.div`

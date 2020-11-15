@@ -23,7 +23,7 @@ function Navbar({toggle}) {
         <div>
             <Nav>
                 <NavLink to='/'>
-                    <h1>quiZAPP</h1>
+                    <h1>QuizGame</h1>
                 </NavLink>
                 <MobileIcon onClick={toggle}>
                     <FaBars />

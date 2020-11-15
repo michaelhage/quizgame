@@ -19,14 +19,25 @@ export const NavLink = styled(Link)`
     padding: 0 1rem;
     height: 100%;
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    
+    /* when link is active */
     &.active {
         color: #15cdfc;
+    }
+
+    /* when link is hovered */
+    &:hover {
+        color: #15cdfc;
+        transition: all 0.2s ease-in-out;
     }
 `;
 
 export const MobileIcon = styled.div`
     display: none;
     color: #fff;
+
+    transition: all 0.2s ease-in-out;
 
     @media screen and (max-width: 768px){
         display: block;
@@ -36,6 +47,11 @@ export const MobileIcon = styled.div`
         transform: translate(-100%, 75%);
         font-size: 1.8rem;
         cursor: pointer;
+    }
+
+    &:hover {
+        color: #15cdfc;
+        transition: all 0.2s ease-in-out;
     }
 `;
 

@@ -3,9 +3,9 @@ import React, {useState} from 'react';
 import Navbar from './components/Navbar/Navbar';
 import Sidebar from './components/Navbar/Sidebar/Sidebar'
 
-import HomePage from './pages/Home'
+import HomePage from './pages/HomePage'
 import About from './pages/About'
-import Game from './pages/Game'
+import Game from './pages/Game/Game'
 
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 
