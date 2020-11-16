@@ -3,10 +3,23 @@ import styled from 'styled-components'
 export const GameWrapper = styled.div`
     display: inline-block;
 
+    width: 100%;
+
     background-color: whitesmoke;
     padding-top: 5%;
+    padding-bottom: 5%;
     /* padding-bottom: 5%; */
 `;
+
+
+export const Bar = styled.div`
+    padding-top: 5%;
+    margin-top: 2.5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 5%;
+    background-color: #256ce1;
+`
 
 export const Question = styled.h1`
     text-align: center;
@@ -28,13 +41,6 @@ export const BoxWrapper = styled.div`
     border: none;
     outline: none;
 
-    margin-left: 5%;
-    margin-right: 5%;
-
-    @media screen and (max-width: 768px) {
-        margin-right: 10%;
-        margin-left: 10%;
-    }
 `;
 
 export const Box = styled.div`
@@ -43,8 +49,8 @@ export const Box = styled.div`
     
     width: 40%;
 
-    margin-right: 2.5%;
-    margin-left: 2.5%;
+    margin-right: 5%;
+    margin-left: 5%;
 
     margin-top: 1.25%;
     margin-bottom: 1.25%;
@@ -65,25 +71,17 @@ export const Box = styled.div`
     &:hover {
     transition: all 0.3s ease-in-out;
     background: #256ce1;
+    color: #fff;
     cursor: pointer;
     }
 
     @media screen and (max-width: 768px) {
-        margin-right: 0;
-        margin-left: 0;
+        margin-right: 10%;
+        margin-left: 10%;
         width: 80%;
         font-size: 5vw;
     }
 `;
-
-export const Bar = styled.div`
-    padding-top: 5%;
-    /* margin-top: 10%; */
-    margin-left: 10%;
-    margin-right: 10%;
-    height: 5%;
-    background-color: #256ce1;
-`
 
 export const NextQuestionBtn = styled.div`
 
@@ -102,10 +100,32 @@ export const NextQuestionBtn = styled.div`
     transition: all 0.2s ease-in-out;
     text-decoration: none;
     
+    font-size: 3vw;
+
+    /* display: none; */
+
+    display: ${({answerClicked}) => (answerClicked ? 'block' : 'none')};
+
     &:hover {
     transition: all 0.2s ease-in-out;
 
     background: #0f0;
     color: #010606;
     }
+`
+
+export const QuestionProgress = styled.h1`
+    float: left;
+    
+    margin-top: 2.5%;
+    margin-left: 2.5%;
+
+    border-radius: 10px;
+    padding: 10px 22px;
+    color: #000;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    
+    font-size: 3vw;
 `

@@ -102,7 +102,7 @@ export const SidebarRoute = styled(Link)`
     text-decoration: none;
 
     &:hover {
-        transition: all 0.2s <ease-in-out;
+        transition: all 0.2s ease-in-out;
         background: #f5f5f5;
         color: #010606;
     }
