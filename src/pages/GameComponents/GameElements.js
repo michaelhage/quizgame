@@ -44,7 +44,17 @@ export const BoxWrapper = styled.div`
 `;
 
 export const Box = styled.div`
-    background-color:#333;
+    background-color: ${props => {
+
+            // console.log(props.selection, props.id)
+
+            if(props.selection === props.id){
+               return '#256ce1';
+            } else {
+                return '#333';
+            }
+        }
+    };
     float: left;
     
     width: 40%;
@@ -71,7 +81,7 @@ export const Box = styled.div`
     &:hover {
     transition: all 0.3s ease-in-out;
     background: #256ce1;
-    color: #fff;
+    color: #ccc;
     cursor: pointer;
     }
 

@@ -6,6 +6,7 @@ import Sidebar from './components/Navbar/Sidebar/Sidebar'
 import HomePage from './pages/HomePage'
 import About from './pages/About'
 import SelectQuiz from './pages/SelectQuiz'
+import PlayQuiz from './pages/PlayQuiz'
 
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 
@@ -28,7 +29,8 @@ function App() {
         <Switch>
           <Route path="/" exact component={HomePage} />
           <Route path='/about-us' exact component={About} />
-          <Route path='/play-quiz' exact component={SelectQuiz} />
+          <Route path='/play-quiz' exact component={PlayQuiz} />
+          <Route path='/select-quiz' exact component={SelectQuiz} />
         </Switch>
       </Router>
   );

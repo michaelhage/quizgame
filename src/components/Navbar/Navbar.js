@@ -46,7 +46,7 @@ function Navbar({toggle}) {
                     </NavLink>
                 </NavMenu>
                 <NavBtn>
-                    <NavBtnLink to="/play-quiz">Play Quiz</NavBtnLink>
+                    <NavBtnLink to="/select-quiz">Play Quiz</NavBtnLink>
                 </NavBtn>
 
 

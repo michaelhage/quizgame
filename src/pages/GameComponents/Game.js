@@ -11,14 +11,11 @@ function Game(props) {
         const items = props.answersArr.map((ans) =>
             <Box 
                 key={ans.id} 
-                onClick={ () => props.answerClicked ? '' : (props.toggleAnswer(ans.id))}
+                onClick={ () => props.toggleAnswer(ans.id, ans.answer)}
+                selection={props.selectionID}
+                id={ans.id}
             >{ans.answer}</Box>
         )
-        // for (const [index, answer] of answers.entries()){
-        //     items.push(<Box key={index} onClick={isClicked(index)} activeStyle>{answer}</Box>)
-        // 
-        // onClick={ () => click ? (isClicked(ans.id), props.toggleAC()): null }
-        // }
         
         return(
             <div>

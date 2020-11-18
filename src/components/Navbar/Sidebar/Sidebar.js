@@ -24,7 +24,7 @@ function Sidebar({isOpen, toggle}){
                     <SidebarLink to="/whatever" onClick={toggle}>Whatever</SidebarLink>
                 </SidebarMenu>
                 <SideBtnWrap>
-                    <SidebarRoute to="/play-quiz">Play Quiz</SidebarRoute>
+                    <SidebarRoute to="/select-quiz">Play Quiz</SidebarRoute>
                 </SideBtnWrap>
             </SidebarWrapper>
         </SidebarContainer>
