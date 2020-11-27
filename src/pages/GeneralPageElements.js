@@ -10,6 +10,11 @@ export const Home = styled.div`
 `;
 
 export const NavBtnLink = styled(Link)`
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+
     border-radius: 4px;
     background: #256ce1;
     padding: 10px 22px;

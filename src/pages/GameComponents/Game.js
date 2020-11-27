@@ -5,7 +5,16 @@ import {Question,
         Box
         } from './GameElements'
 
+// function strDecode(string){
+//     const parser = new DOMParser();
+//     const decodedString = parser.parseFromString(`<!doctype html><body>${string}`, 'text/html').body.textContent;
+//     // console.log(decodedString);
+//     return (decodedString)
+// }
+
 function Game(props) {
+
+    // console.log(props)
 
     const addAnswers = () => {
         const items = props.answersArr.map((ans) =>
@@ -14,9 +23,10 @@ function Game(props) {
                 onClick={ () => props.toggleAnswer(ans.id, ans.answer)}
                 selection={props.selectionID}
                 id={ans.id}
-            >{ans.answer}</Box>
+            >{decodeURIComponent(ans.answer)}</Box>
         )
         
+
         return(
             <div>
                 {items}
@@ -27,7 +37,7 @@ function Game(props) {
     return (
         <div>
             <Question>
-                {props.question}
+                {decodeURIComponent(props.question)}
             </Question>
             <BoxWrapper>
                 {addAnswers()}

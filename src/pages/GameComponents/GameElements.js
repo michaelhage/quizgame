@@ -4,6 +4,7 @@ export const GameWrapper = styled.div`
     display: inline-block;
 
     width: 100%;
+    height: calc(100% - 80px);
 
     background-color: whitesmoke;
     padding-top: 5%;
@@ -129,6 +130,23 @@ export const QuestionProgress = styled.h1`
     
     margin-top: 2.5%;
     margin-left: 2.5%;
+
+    border-radius: 10px;
+    padding: 10px 22px;
+    color: #000;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    
+    font-size: 3vw;
+`
+
+export const ScoreWrapper = styled.h1`
+    float: left;
+    
+    margin-top: 2.5%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
 
     border-radius: 10px;
     padding: 10px 22px;
