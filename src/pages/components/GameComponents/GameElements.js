@@ -4,7 +4,7 @@ export const GameWrapper = styled.div`
     display: inline-block;
 
     width: 100%;
-    height: calc(100% - 80px);
+    height: calc(100vh - 80px);
 
     background-color: whitesmoke;
     padding-top: 5%;

@@ -1,10 +1,10 @@
 import React from 'react'
 
-import {NavBtnLink} from './GeneralPageElements';
+import {HeroContainer, HeroBtn, HeroItems} from './GeneralPageElements';
 
-import SelectOption from './SelectComponents/SelectOption'
+import SelectOption from './components/SelectComponents/SelectOption'
 
-import {SelectContainer, SelectText} from './SelectComponents/SelectElements'
+import {SelectContainer, SelectText} from './components/SelectComponents/SelectElements'
 
 class SelectQuiz extends React.Component{
 
@@ -24,6 +24,7 @@ class SelectQuiz extends React.Component{
         this.categorySelect = this.categorySelect.bind(this)
         this.amountSelect = this.amountSelect.bind(this)
         this.difficultySelect = this.difficultySelect.bind(this)
+        this.getQuizAPI = this.getQuizAPI.bind(this)
     }
 
     difficultySelect(e){
@@ -57,7 +58,7 @@ class SelectQuiz extends React.Component{
         })
     }
 
-    async componentDidMount(){
+    async getQuizAPI(){
         const url = "https://opentdb.com/api_category.php";
         const response = await fetch(url);
         const data = await response.json();
@@ -69,6 +70,10 @@ class SelectQuiz extends React.Component{
         })
 
         // console.log(this.state.categories)
+    }
+
+    async componentDidMount(){
+        this.getQuizAPI()
     }
 
     render(){
@@ -109,40 +114,47 @@ class SelectQuiz extends React.Component{
 
         return (
             <div>
-                <SelectContainer>
-                    <SelectText>
-                        Category
-                    </SelectText>
-                    <SelectOption 
-                        components={this.state.categories}
-                        func={this.categorySelect}
-                    />
+                <HeroContainer>
+                    <SelectContainer>
+                        <SelectText>
+                            Category
+                        </SelectText>
+                        <SelectOption 
+                            components={this.state.categories}
+                            func={this.categorySelect}
+                        />
 
-                    <SelectOption 
-                        components={countArray}
-                        func={this.amountSelect}
-                        placeholder={10}
-                    />
-
-                    <SelectOption 
-                        components={diffArray}
-                        func={this.difficultySelect}
-                    />
-                </SelectContainer>
-                <NavBtnLink 
-                    to={{ 
-                        pathname: '/play-quiz', 
-                        state: { 
-                            url: this.state.url 
-                                    + this.state.amountString 
-                                    + this.state.categoryString 
-                                    + this.state.diffString
-                                    + "&encode=url3986"
-                        } 
-                    }}
-                >
-                    Go play
-                </NavBtnLink>
+                        <SelectText>
+                            Amount of Questions
+                        </SelectText>
+                        <SelectOption 
+                            components={countArray}
+                            func={this.amountSelect}
+                            placeholder={10}
+                        />
+                        
+                        <SelectText>
+                            Difficulty
+                        </SelectText>
+                        <SelectOption 
+                            components={diffArray}
+                            func={this.difficultySelect}
+                        />
+                        <HeroBtn 
+                            to={{ 
+                                pathname: '/play-quiz', 
+                                state: { 
+                                    url: this.state.url 
+                                            + this.state.amountString 
+                                            + this.state.categoryString 
+                                            + this.state.diffString
+                                            + "&encode=url3986"
+                                } 
+                            }}
+                        >Start Quiz
+                        </HeroBtn>
+                    </SelectContainer>
+                </HeroContainer>
             </div>
         )
     }

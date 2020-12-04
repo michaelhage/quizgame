@@ -1,12 +1,12 @@
 import React from 'react'
 
-import TimerBar from './GameComponents/TimerBar'
-import Game from './GameComponents/Game'
-import QuestionCounter from './GameComponents/QuestionCounter'
-import NextQuestion from './GameComponents/NextQuestion'
-import Score from './GameComponents/Score'
+import TimerBar from './components/GameComponents/TimerBar'
+import Game from './components/GameComponents/Game'
+import QuestionCounter from './components/GameComponents/QuestionCounter'
+import NextQuestion from './components/GameComponents/NextQuestion'
+import Score from './components/GameComponents/Score'
 
-import {GameWrapper} from './GameComponents/GameElements';
+import {GameWrapper} from './components/GameComponents/GameElements';
 import {NavBtnLink} from './GeneralPageElements';
 
 class PlayQuiz extends React.Component{
@@ -29,25 +29,6 @@ class PlayQuiz extends React.Component{
 
 
             url: props.location.state.url,
-            // question: ["What symphony's last movement includes a setting of Schiller's poem 'Hymn to Joy'?"],
-            // answersArr: [
-            //                 {
-            //                     answer: "Beethoven's Ninth",
-            //                     id: 1
-            //                 }, 
-            //                 {
-            //                     answer:"Bruckner's Eight",
-            //                     id: 2
-            //                 }, 
-            //                 {
-            //                     answer:"Mahler's Tenth",
-            //                     id: 3
-            //                 }, 
-            //                 {
-            //                     answer:"Mozart's 40th",
-            //                     id: 4
-            //                 }
-            //             ],
             items: [],
             question: [],
             answersArr: [],

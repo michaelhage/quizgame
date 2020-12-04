@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
-import Navbar from './components/Navbar/Navbar';
-import Sidebar from './components/Navbar/Sidebar/Sidebar'
+import Navbar from './pages/components/Navbar/Navbar';
+import Sidebar from './pages/components/Navbar/Sidebar/Sidebar'
 
 import HomePage from './pages/HomePage'
 import About from './pages/About'

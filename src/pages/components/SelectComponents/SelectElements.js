@@ -1,15 +1,19 @@
 import styled from 'styled-components'
 
+// import Select from 'react-select'
+
 export const SelectContainer = styled.div`
     /* width: 500px; */
-    padding: 50px auto 0;
+    
+    padding-top: 2.5%;
     text-align: center;
-    background-color: whitesmoke;
+    color: whitesmoke;
 `;
 
 export const SelectWrapper = styled.div`
     display: block;
-    padding-top: 5%;
+    padding-bottom: 2.5%;
+    /* font: whitesmoke; */
 `
 
 export const SelectDiv = styled.select`
@@ -20,8 +24,10 @@ export const SelectDiv = styled.select`
     padding-top: 2.5%;
     padding-bottom: 2.5%;
     
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    /* margin-left: 5%; */
+    /* margin-right: 5%; */
     
     text-align: center;
 

@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import ImgBg from './images/quiz_home.jpg'
+
 import {NavLink as Link } from 'react-router-dom'
 
 export const Home = styled.div`
@@ -31,3 +33,82 @@ export const NavBtnLink = styled(Link)`
     color: #010606;
     }
 `;
+
+export const HeroContainer = styled.div`
+    background: linear-gradient(to right, rgba(0,0,0,0.7),
+    rgba(0,0,0,0.1)), url(${ImgBg});
+
+    height: calc(100vh - 80px);
+    /* height: 100vh; */
+    background-position: center;
+    background-size: cover;
+`;
+
+export const HeroContent = styled.div`
+    height: calc(100vh - 80px);
+    
+    max-height: 100%;
+    width: 100vw;
+    
+    padding: 0rem calc((100vw - 1300px) /2);
+`;
+
+export const HeroItems = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+    height: 100vh;
+    max-height: 100%;
+    width: 650px;
+
+    padding: 0 2rem;
+
+    color: whitesmoke;
+    text-transform: uppercase;
+    line-height: 1;
+    font-weight: bold;
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
+
+`;
+
+export const HeroH1 = styled.h1`
+    
+    /* This ensures that the font size will scale for mobile devices */
+    font-size: clamp(2.5rem, 10vw, 5rem);
+
+    margin-bottom: 1rem;
+    box-shadow: 3px 5px #e9ba23;
+    letter-spacing: 3px;
+`;
+
+export const HeroP = styled.p`
+    font-size: clamp(2rem, 1.5vw, 3rem);
+    margin-bottom: 2rem;
+`;
+
+export const HeroBtn = styled(Link)`
+    font-size: 1.4rem;
+    text-decoration: none;
+    text-transform: none;
+
+    padding: 1rem 4rem;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #caa11c;
+    color: whitesmoke;
+    transition: 0.3s ease-out;
+
+    &:hover {
+        background:#256ce1;
+        transition: 0.3s ease-out;
+        cursor: pointer;
+        color: #000;
+    }
+`

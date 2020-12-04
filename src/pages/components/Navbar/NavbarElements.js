@@ -27,7 +27,7 @@ export const NavLink = styled(Link)`
 
     /* when link is hovered */
     &:hover {
-        color: #15cdfc;
+        color: #caa11c;
         transition: all 0.2s ease-in-out;
     }
 `;
@@ -87,7 +87,7 @@ export const NavBtnLink = styled(Link)`
     
     &:hover {
     transition: all 0.2s ease-in-out;
-    background: #fff;
+    background: ;
     color: #010606;
     }
 `;
